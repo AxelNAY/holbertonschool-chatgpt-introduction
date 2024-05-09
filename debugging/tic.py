@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def print_board(board):
     """Print the Tic-Tac-Toe board."""
     for row in board:
@@ -49,6 +50,10 @@ def tic_tac_toe():
                 print("Invalid input. Please enter a valid row and column.")
 
     print_board(board)
-    print("Player " + player + " wins!")
+    if player == "X":
+        winning_player = "O"
+    else:
+        winning_player = "X"
+    print("Player " + winning_player + " wins!")
 
 tic_tac_toe()
